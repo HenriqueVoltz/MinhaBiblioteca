@@ -1,0 +1,392 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabeçalho fixo -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minha Biblioteca"
+            android:textStyle="bold"
+            android:textColor="#8B4513"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/filtro"
+            android:contentDescription="Filtrar" />
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filterButton"
+            android:layout_alignEnd="@id/filterButton"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/mais"
+            android:contentDescription="Adicionar" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="⬅"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <!-- LinearLayout único como filho do ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Primeira zona de livro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/books"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTitulo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A Metamorfose"
+                        android:textColor="@color/inicio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <ImageButton
+                        android:id="@+id/btnEditar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Editar livro"
+                        android:src="@drawable/lapis" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAutor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Autor(a): Franz Kafka" />
+                <TextView
+                    android:id="@+id/tvGenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Gênero: Ficção" />
+                <TextView
+                    android:id="@+id/tvPaginas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Páginas: 96" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|bottom">
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ja_li"
+                        android:text="Já Li"
+                        android:textColor="@android:color/white"
+                        android:padding="6dp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Segunda zona de livro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/books"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTitulo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1984"
+                        android:textColor="@color/inicio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <ImageButton
+                        android:id="@+id/btnEditar2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Editar livro"
+                        android:src="@drawable/lapis" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAutor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Autor(a): George Orwell" />
+                <TextView
+                    android:id="@+id/tvGenero2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Gênero: Distopia" />
+                <TextView
+                    android:id="@+id/tvPaginas2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Páginas: 328" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|bottom">
+                    <TextView
+                        android:id="@+id/tvStatus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/lendo"
+                        android:text="LENDO"
+                        android:textColor="@android:color/white"
+                        android:padding="6dp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Terceira zona de livro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/books"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTitulo3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="O sol é para todos"
+                        android:textColor="@color/inicio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <ImageButton
+                        android:id="@+id/btnEditar3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Editar livro"
+                        android:src="@drawable/lapis" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAutor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Autor(a): Harper lee" />
+                <TextView
+                    android:id="@+id/tvGenero3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Gênero: Drama" />
+                <TextView
+                    android:id="@+id/tvPaginas3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Páginas: 281" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|bottom">
+                    <TextView
+                        android:id="@+id/tvStatus3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/quero_ler"
+                        android:text="Quero Ler"
+                        android:textColor="@android:color/white"
+                        android:padding="6dp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quarta zona de livro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/books"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTitulo4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="O nome do vento"
+                        android:textColor="@color/inicio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <ImageButton
+                        android:id="@+id/btnEditar4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Editar livro"
+                        android:src="@drawable/lapis" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAutor4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="-Autor(a): Patrick Rothfuss" />
+                <TextView
+                    android:id="@+id/tvGenero4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Gênero: Fantasia" />
+                <TextView
+                    android:id="@+id/tvPaginas4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Páginas: 656" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|bottom">
+                    <TextView
+                        android:id="@+id/tvStatus4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ja_li"
+                        android:text="Já Li"
+                        android:textColor="@android:color/white"
+                        android:padding="6dp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quinta zona de livro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/books"
+                android:layout_margin="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTitulo5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="O pequeno príncipe"
+                        android:textColor="@color/inicio"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <ImageButton
+                        android:id="@+id/btnEditar5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Editar livro"
+                        android:src="@drawable/lapis" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvAutor5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Autor(a): Antoine de Saint-Exupéry" />
+                <TextView
+                    android:id="@+id/tvGenero5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Gênero: Fábula" />
+                <TextView
+                    android:id="@+id/tvPaginas5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/inicio"
+                    android:text="Páginas: 96" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|bottom">
+                    <TextView
+                        android:id="@+id/tvStatus5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ja_li"
+                        android:text="Já Li"
+                        android:textColor="@android:color/white"
+                        android:padding="6dp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
