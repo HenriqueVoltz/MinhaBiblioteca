@@ -13,7 +13,13 @@
         android:theme="@style/Theme.MinhaBiblioteca"
         tools:targetApi="31">
         <activity
-            android:name=".TelaBiblioteca"
+            android:name=".Tela_criacao"
+            android:exported="false" />
+        <activity
+            android:name=".Tela_edicao"
+            android:exported="false" />
+        <activity
+            android:name=".Telabiblioteca"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

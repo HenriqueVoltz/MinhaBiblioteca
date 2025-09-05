@@ -24,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button button = findViewById(R.id.button);
+        Button button = findViewById(R.id.btn_acessar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TelaBiblioteca.class);
+                Intent intent = new Intent(MainActivity.this, Telabiblioteca.class);
                 startActivity(intent);
             }
         });
     }
+
 
 }

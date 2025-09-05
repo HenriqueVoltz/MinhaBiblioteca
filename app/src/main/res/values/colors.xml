@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="inicio">#A5644B</color>
     <color name="books">#F0D2CD</color>
+    <color name="minha_cor_marrom">#a5644b</color>
+    <color name="cor_radio_selecionado_jali">#FF4CAF50</color>   <!-- Verde para "Já Li" -->
+    <color name="cor_radio_selecionado_lendo">#FF03A9F4</color>   <!-- Azul para "Lendo" -->
+    <color name="cor_radio_selecionado_wishlist">#FFFF9800</color> <!-- Laranja para "Wishlist" -->
+    <color name="cor_radio_nao_selecionado">#8A000000</color> <!-- Cinza escuro para não selecionado (ou a cor padrão do tema) -->
+    <color name="cor_radio_todos_selecionado">#FF757575</color> <!-- Cinza para "Todos" quando selecionado (opcional) -->
+
 </resources>

@@ -31,7 +31,7 @@
             >
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_acessar"
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@android:dimen/notification_large_icon_height"
